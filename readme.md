@@ -1,4 +1,4 @@
-# Data transformation challenge
+# Bank OCR - Data transformation
 
 This scripts aims to transform a series of number formed with underscores and pipes into real numbers. It does three things,
 * Transform characters to numbers
