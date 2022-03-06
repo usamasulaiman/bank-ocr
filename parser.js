@@ -1,4 +1,4 @@
-import mapOfNumbers from './numberMap';
+mapOfNumbers = require('./numberMap');
 
 // PART 1
 //
@@ -28,7 +28,7 @@ async function dataHandler(fileData) {
 }
 
 // This will convert an 81 character string to an actual account number
-function convertToDecimal(number, index){
+function convertToDecimal(number){
   if (!number.toString().length) return;
   // Dividing up strings into groups of 9, representing a single digit
   const arrayOfDigits = number.match(/........./g);
@@ -47,12 +47,12 @@ async function parsingToReal(fileData) {
   const gibberishAccountNumbers =  await dataHandler(fileData);
   if (!gibberishAccountNumbers || !gibberishAccountNumbers.length) return false;
 
-  const actual = gibberishAccountNumbers.map((number, index) => {
-    const converted =  convertToDecimal(number, index);
+  const actual = gibberishAccountNumbers.map((number) => {
+    const converted =  convertToDecimal(number);
     return converted;
   })
   
   return actual;
 }
 
-export default parsingToReal;
+module.exports = parsingToReal;

@@ -1,6 +1,7 @@
 // PART 3
 //
-import * as fs from 'fs';
+fs = require('fs');
+
 
 // Writing out a file based on the results generated from the two steps above
 async function writeConvertedNumbers(checkSumTable) {
@@ -16,4 +17,4 @@ async function writeConvertedNumbers(checkSumTable) {
 
 }
 
-export default writeConvertedNumbers;
+module.exports = writeConvertedNumbers;

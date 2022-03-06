@@ -43,4 +43,4 @@ const mapOfNumbers = {
     
 }
 
-export default mapOfNumbers;
+module.exports = mapOfNumbers;

@@ -4,8 +4,8 @@
   "description": "This scripts aims to transform a series of number formed with underscores and pipes into real numbers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --experimental-modules --es-module-specifier-resolution=node index.js"
+    "test": "jest",
+    "start": "rm -f result.txt && node --experimental-modules --es-module-specifier-resolution=node index.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,12 @@
   "devDependencies": {
     "jest": "^27.5.1"
   },
-  "type" : "module"
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]s?$": "babel-jest"
+    }
+  },
+  "transformIgnorePatterns": [
+    "node_modules/(?!variables/.*)"
+  ]
 }

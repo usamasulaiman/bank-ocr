@@ -15,4 +15,5 @@ async function checkSumCalculation(actualNumber) {
 
   return checkSumTable;
 }
-export default checkSumCalculation;
+
+module.exports = checkSumCalculation;
